@@ -5,7 +5,7 @@
 [![Control: Proportional-Integral-Derivative](https://img.shields.io/badge/Control-Closed%20Loop%20PID-orange.svg)](firmware/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-> A high-speed, closed-loop autonomous line-following robot engineered using discrete **Proportional-Integral-Derivative (PID)** control algorithms and an 8-channel multiplexed infrared reflectance sensor bar. Engineered for zero-oscillation tracking on complex competition tracks featuring 90° sharp turns, cross junctions, and acute acute curves.
+> A high-speed, closed-loop autonomous line-following robot engineered using discrete **Proportional-Integral-Derivative (PID)** control algorithms and an 8-channel multiplexed infrared reflectance sensor bar. Engineered for zero-oscillation tracking on complex competition tracks featuring 90° sharp turns, cross junctions, and acute curves.
 
 ---
 
@@ -24,6 +24,25 @@ Where:
 - $K_p$: Proportional gain for rapid response to line displacement.
 - $K_i$: Integral gain to eliminate steady-state drift on prolonged curvature.
 - $K_d$: Derivative gain to prevent overshoot and dampen oscillatory hunting.
+
+---
+
+## 🖼️ Circuit & Wiring
+
+<div align="center">
+
+<img src="hardware/Circuit-Diagram.jpg" width="90%" alt="Complete circuit diagram: 8-channel IR array, Arduino Nano, TB6612FNG driver, 3S LiPo and two micro metal gearmotors"/>
+
+*Complete wiring: 8-channel IR array → analog MUX → Arduino Nano → TB6612FNG → two micro metal gearmotors, powered by a 3S 1000 mAh LiPo.*
+
+<img src="hardware/Diagram 1.jpg" width="45%" alt="Left motor wiring"/> <img src="hardware/Diagram 2.jpg" width="45%" alt="Right motor wiring"/>
+
+</div>
+
+| Motor | Forward | Backward | Speed (PWM) |
+|:---|:---:|:---:|:---:|
+| **Left** | D5 | D6 | D9 |
+| **Right** | D2 | D4 | D3 |
 
 ---
 

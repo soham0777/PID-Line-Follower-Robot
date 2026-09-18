@@ -1,0 +1,13 @@
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+.vscode/
+.idea/
+*.workspace
+__pycache__/
+*.pyc
+robot_env/
+venv/
+.env
